@@ -3,7 +3,6 @@ import Canvas from './components/Canvas';
 import StickerButton from './components/StickerButton';
 import './App.css';
 
-import { useState } from 'react';
 
 const imagePaths = [
     '/stickers/christmas-decoration.png',
