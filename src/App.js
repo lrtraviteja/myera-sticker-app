@@ -60,7 +60,7 @@ function App() {
           <button onClick={downloadImage} className="download-btn">Download</button>
       </div>
       <Canvas
-        stickers={stickers}
+        stickers={stickersOnCanvas}
         onDragEnd={updateStickerPosition}
         onDoubleClick={deleteSticker}
         stageRef={stageRef}
