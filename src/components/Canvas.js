@@ -29,7 +29,7 @@ function Canvas({ stickers, onDragEnd, onDoubleClick, stageRef }) {
                 {stickers.map((sticker) => (
                     <Sticker
                         key={sticker.id}
-                        stickers={stickers}
+                        sticker={sticker}
                         onDragEnd={onDragEnd}
                         onDoubleClick={onDoubleClick}
                     />
