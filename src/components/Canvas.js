@@ -22,9 +22,9 @@ function Sticker({ sticker, onDragEnd, onDoubleClick }) {
     );
 }
 
-function Canvas({ stickers}) {
+function Canvas({ stickers, onDragEnd, onDoubleClick, stageRef }) {
     return (
-        <Stage width={600} height={600} style={{ border: '1px solid black' }}>
+        <Stage width={600} height={600} ref={stageRef} style={{ border: '1px solid black' }}>
             <Layer>
                 {stickers.map((sticker) => (
                     <Sticker
