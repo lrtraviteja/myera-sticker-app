@@ -1,0 +1,22 @@
+.app-container {
+  display: flex;
+  padding: 20px;
+}
+
+.buttons-panel {
+  display: flex;
+  flex-direction: column;
+  margin-right: 20px;
+}
+
+.download-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(90deg, #ffb347 0%, #ffcc33 100%);
+  border: none;
+  border-radius: 8px;
+}
+
+
