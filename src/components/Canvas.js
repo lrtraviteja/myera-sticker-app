@@ -9,6 +9,15 @@ function Sticker({ sticker, onDragEnd, onDoubleClick }) {
             image={img}
             x={sticker.x}
             y={sticker.y}
+            draggable
+            onDragEnd={(e) => {
+                const snappedX = Math.round(e.target.x() / 40) * 40;
+                const snappedY = Math.round(e.target.y() / 40) * 40;
+                onDragEnd(sticker.id, snappedX, snappedY);
+            }}
+            onDblClick={() => onDoubleClick(sticker.id)}
+            width={50}
+            height={50}
         />
     );
 }
@@ -20,7 +29,9 @@ function Canvas({ stickers}) {
                 {stickers.map((sticker) => (
                     <Sticker
                         key={sticker.id}
-                        sticker={sticker}
+                        stickers={stickers}
+                        onDragEnd={onDragEnd}
+                        onDoubleClick={onDoubleClick}
                     />
                 ))}
             </Layer>
